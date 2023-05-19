@@ -1,0 +1,213 @@
+"""TASK THREE"""
+# Q1 
+# li = [3, 4, 5, "hel", "ja", "te", 2+5j, 6+9j, 4.5, 3.00]
+# print(li)
+
+# Q2
+# print(li[:5])
+
+# Q3
+# li = [3, 4, 5, 7, 8, 9]
+# print("sum of list numbers is ", sum(li))
+
+# product = 1
+# for i in li:
+#     product = product*i
+
+# print("Product of numbers ", product)
+
+# Q4
+# Max number
+# li = [5, 4, 3, 8]
+# max_ = li[0]
+# for i in range(1, len(li)):
+#     if li[i]>li[i-1]:
+#         max_=li[i]
+
+# print(max_)
+
+## Min number
+# li = [5, 4, 3, 8]
+# min_ = li[0]
+# for i in range(1, len(li)):
+#     if li[i]<li[i-1]:
+#         min_=li[i]
+
+# print(min_)
+
+# Q5
+# li = [2, 3, 4, 5, 1]
+# for i in li:
+#     if i%2==0:
+#         li.remove(i)
+# print(li)
+
+# Q6
+# Create a list of elements such that it contains the squares of the first and last 5 elements between
+# 1 and30 (both included).
+# li = []
+# for i in range(1, 31):
+#     if i not in range(2, 27):
+#         li.append(i*i)
+
+# print(li)
+
+# Q7
+# Sample input: [1,3,5,7,9,10], [2,4,6,8]
+# Expected output: [1,3,5,7,9,2,4,6,8]
+# li_1 = [1,3,5,7,9,10]
+# li_2 = [2,4,6,8]
+# li_1.pop(-1)
+# for i in li_2:
+#     li_1.append(i)
+# print(li_1)
+
+#Q8
+# Create a new dictionary by concatenating the following two dictionaries:
+# Sample input: a={1:10,2:20} b={3:30,4:40}
+# Expected output: {1:10,2:20,3:30,4:40}
+
+# d = {}
+# a={1:10,2:20}
+# b={3:30,4:40}
+# print(a|b)
+# print({**a,**b})
+# dict_3={k:v for d in (dict_1,dict_2) for k,v in d.items()}
+
+#Q9
+# d = {}  
+# for i in range(1, 6):
+#     d[i]=i*i
+# print(d)
+
+#Q10
+# t1 = []
+# t2 = ()
+# print("Enter 5 numbers\n")
+# for i in range(1, 6):
+#     x = input('\n')
+#     t1.append(x)
+#     t2 = t2+ tuple(x)
+# print(t1)
+# print(t2)
+
+"""TASK FOUR"""
+#Q1
+# s = "1234abcd"
+# rev = ""
+# for i in s:
+#     rev = i+rev
+# print(rev)
+
+#Q2
+# s = "abcSdefPghijQkl"
+# upp_count = 0
+# low_count = 0
+# for i in s:
+#     if i.islower():
+#         low_count+=1
+#     else:
+#         upp_count+=1
+# print("Upper count is ", upp_count)
+# print("Lower count is ", low_count)
+
+#Q3
+# def find_unique(li):
+#     return list(set(li))
+
+# print(find_unique([1, 3, 4, 4, 5, 5, 6]))
+
+#Q4
+# def refine(s):
+#     #s = 'is-a-tom-pt'
+#     return sorted(s)
+
+# print(refine('is-a-tom-pt'))
+
+#Q5
+# def capitalize(sentence):
+#     return sentence.upper()
+# print(capitalize('Hello world Practice makes man perfect'))   
+    
+#06
+# def sum_(a, b):
+#     return (int(a)+int(b))
+# print(sum_('4', '5'))
+
+#07
+# def max_len(s1, s2):
+#     if len(s1)>len(s2):
+#         return s1
+#     elif len(s1)==len(s2):
+#         return s1 + '\n' + s2
+#     else:
+#         return s2
+    
+# print(max_len('isha', 'jajo'))
+
+#08
+# def gen_():
+#     li = []
+#     for i in range(1, 21):
+#         li.append(i*i)
+#     return tuple(li)
+
+# print(gen_())
+
+#09
+# def showNumbers(limit):
+#     for i in range(limit+1):
+#         if i%2==0:
+#             print(str(i)+' '+'EVEN')
+#         else:
+#             print(str(i)+' '+'ODD')
+#     return ""
+# print(showNumbers(3))
+
+#10
+# result = filter(lambda x: x%2==0, range(1, 21))
+# print(list(result))
+
+#11
+# Write a program which uses map() and filter() to make a list whose elements are squares of even
+# numbers in [1,2,3,4,5,6,7,8,9,10].
+# Hints: Use filter() to filter even elements of the given listUse map() to generate a list of squares of the
+# numbers in the filtered list. Use lambda() to define anonymous functions.
+
+# y = list(filter(lambda x: x%2==0, [1,2,3,4,5,6,7,8,9,10]))
+# print(list(map(lambda t: t*t, y)))
+
+#12
+# def divide():
+#     try:
+#         n = 5/0
+#     except ArithmeticError as e:
+#         print('Arithmetic error ')
+
+# print(divide())
+
+#13
+# from functools import reduce
+# z = reduce(lambda x, y: str(x)+str(y), [1,2,3,4,5,6,7])
+# print(z)
+
+#14
+# Write a program in Python to find the values which are not divisible by 3 but are a multiple of 7.
+# Make sure to use only higher order functions.
+# def check(l):
+#     li = []
+#     for i in range(len(l)):
+#         if l[i]%3!=0 and l[i]%7==0:
+#             li.append(l[i])
+#             #print(l)
+#     return li
+# print(check([2, 3, 4, 28, 35]))
+# gen = check
+# print(gen([2, 3, 4, 28, 35, 70]))
+
+#15
+#print(list(map(lambda x, y: x*y, [2, 3, 4, 5], [2, 3, 4, 5])))
+
+#16
+# Ans 1: 2
+# Ans 2: NameError: name 'f' is not defined
